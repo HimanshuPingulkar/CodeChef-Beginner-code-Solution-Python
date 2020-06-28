@@ -1,0 +1,14 @@
+t = int(input())
+
+for _ in range(t):
+    l = {'0': 6, '1': 2, '2': 5, '3': 5, '4': 4, '5': 5, '6': 6, '7': 3, '8': 7, '9': 6}
+    tot = 0
+
+    a, b = input().split()
+    c = str(int(a) + int(b))
+
+    for i in range(len(c)):
+        if c[i] in l:
+            tot += l[c[i]]
+    
+    print(tot)
