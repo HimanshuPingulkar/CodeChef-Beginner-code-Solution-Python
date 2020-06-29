@@ -1,0 +1,12 @@
+for _ in range(int(input())):
+    n, a = int(input()), []
+    a = list(map(int, input().split()))
+    count = 0
+
+    for i in range(n):
+        sm, pd = 0, 1
+        for j in range(i, n):
+            sm += a[j]
+            pd *= a[j]
+            if sm == pd: count += 1
+    print(count)        
