@@ -1,0 +1,10 @@
+for _ in range(int(input())):
+    n = int(input())
+    l = [0 for i in range(11)]
+
+    for i in range(n):
+        q, mk = map(int, input().split())
+        if q <= 8:
+            if l[q] < mk:
+                l[q] = mk
+    print(sum(l))
