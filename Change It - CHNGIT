@@ -1,0 +1,17 @@
+for _ in range(int(input())):
+    n, a, cnt = int(input()), [], []
+    a = list(map(int, input().split()))
+
+    for i in range(n):
+        count = 0
+        for j in range(n):
+            if a[i] == a[j]:
+                count += 1
+        cnt.append(count)
+    b = cnt.index(max(cnt))
+
+    count = 0
+    for i in range(n):
+        if a[i] != a[b]:
+            count += 1
+    print(count)
