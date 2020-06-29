@@ -1,0 +1,10 @@
+for _ in range(int(input())):
+    s1=(input())
+    s2=input()
+    a, b = 0, 0
+    for i,j in zip(s1,s2):
+        if(i!=j or i=="?" or j=="?"):
+            a+=1 
+        if(i!=j and i!="?" and j!="?"):
+            b+=1
+    print(a,b)
