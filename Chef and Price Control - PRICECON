@@ -1,0 +1,13 @@
+t = int(input())
+
+for _ in range(t):
+    rev1, rev2 = 0, 0
+
+    n, k = input().split()
+    n, k = int(n), int(k)
+    l = list(map(int, input().split()))
+   
+    rev1 = sum(l)
+    m = [l[i] if l[i]<=k else k for i in range(n)]
+    rev2 = sum(m) 
+    print(rev1 - rev2)
