@@ -1,0 +1,10 @@
+for _ in range(int(input())):
+    l = [100,50,10,5,2,1]
+    n, c = int(input()), 0
+    while(n > 0):
+        for i in l:
+            if(i <= n):
+                n -= i
+                c += 1 
+                break
+    print(c)
