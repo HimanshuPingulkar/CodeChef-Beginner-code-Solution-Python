@@ -1,0 +1,15 @@
+for _ in range(int(input())):
+    l, b = map(int, input().split())
+    li, bo, cd = 0, 0, 1
+
+    while(True):
+        if  (li+cd)<=l: 
+            li += cd
+            cd += 1
+            if (bo+cd)<=b:
+                bo += cd
+                cd += 1 
+        else: break
+
+    if li>bo: print('Limak')
+    else: print('Bob') 
