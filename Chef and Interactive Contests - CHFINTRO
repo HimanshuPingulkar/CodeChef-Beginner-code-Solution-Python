@@ -1,0 +1,4 @@
+n, r = map(int, input().split())
+for i in range(n):
+    R = int(input())
+    print( *['Good boi' if R>=r else 'Bad boi'])
