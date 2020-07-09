@@ -1,0 +1,19 @@
+for _ in range(int(input())):
+    n = int(input())
+    s = input()
+    a, b, prev = 0, 0, ''
+    
+    for i in range(n):
+        if s[i] == 'L' and prev not in ('L', 'R'):
+            a -= 1
+            prev = s[i]
+        elif s[i] == 'R' and prev not in ('L', 'R'):
+            a += 1
+            prev = s[i]
+        elif s[i] == 'U' and prev not in ('U', 'D'):
+            b += 1
+            prev = s[i]
+        elif s[i] == 'D' and prev not in ('U', 'D'):
+            b -= 1
+            prev = s[i]
+    print(a, b)  
