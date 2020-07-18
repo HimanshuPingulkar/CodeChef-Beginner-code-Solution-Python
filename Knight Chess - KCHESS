@@ -1,0 +1,55 @@
+for _ in range(int(input())):
+    n = int(input())
+    checks = []
+    for j in range(n):
+        x, y = map(int, input().split())
+        checks += [(x, y), (x+1, y+2), (x-1, y+2), (x-1, y-2),
+        (x+1, y-2), (x-2, y+1), (x-2, y-1), (x+2, y+1), (x+2, y-1)]
+    a, b = map(int, input().split())
+    ans = 'YES'
+    for h in range(a-1, a+2):
+        for k in range(b-1, b+2):
+            if (h,k) not in checks:
+                ans = 'NO'
+                break
+    print(ans)
+    
+ # ______________________________
+ 
+ try:
+    t=int(input())
+    for _ in range(t):
+        n=int(input())
+        k=[]
+        for i in range(n):
+            x,y=map(int,input().split())
+            k.append([x-2,y-1])
+            k.append([x+2,y-1])
+            k.append([x+2,y+1])
+            k.append([x-2,y+1])
+            k.append([x-1,y-2])
+            k.append([x+1,y-2])
+            k.append([x+1,y+2])
+            k.append([x-1,y+2])
+        ki=[]
+        x,y=map(int,input().split())
+        ki.append([x,y])
+        ki.append([x-1,y])
+        ki.append([x,y+1])
+        ki.append([x+1,y])
+        ki.append([x,y-1])
+        ki.append([x-1,y])
+        ki.append([x,y+1])
+        ki.append([x-1,y-1])
+        ki.append([x+1,y+1])
+        ki.append([x-1,y+1])
+        ki.append([x+1,y-1])
+        result="YES"
+        for i in ki:
+            if i not in k:
+                result="NO"
+                break
+        print(result)
+        
+except:
+    pass
