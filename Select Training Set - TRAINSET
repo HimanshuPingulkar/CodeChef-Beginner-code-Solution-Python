@@ -1,0 +1,36 @@
+for _ in range(int(input())):
+    n = int(input())
+    dict = {}
+    count = 0
+    for i in range(n):
+        s, num = input().split()
+        if s not in dict or dict[s] == int(num):
+            dict[s] = int(num)
+            count += 1
+    print(count)
+
+# ____________________________________________________ #
+
+
+for _ in range(int(input())):
+    n=int(input())
+    d={}
+    for xx in range(n):
+        
+        x=[]
+        x=list(map(str,input().split()))
+        if(x[0] not in d.keys()):
+            if(x[1]=='0'):
+               d[x[0]]=[1,0]
+            else:
+               d[x[0]]=[0,1]
+        else:
+            if(x[1]=='0'):
+                d[x[0]][0]+=1 
+            else:
+                d[x[0]][1]+=1 
+    ans=0
+    #print(d)
+    for i in d:
+        ans+=max(d[i][0],d[i][1])
+    print(ans)    
