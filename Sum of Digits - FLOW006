@@ -2,3 +2,10 @@ for _ in range(int(input())):
     a, b = input(), 0
     b = [b+int(a[i]) for i in range(len(a))]
     print(sum(b))
+
+# _________________________________________________ #
+
+for _ in range(int(input())):
+    a = input()
+    a = list(map(int, a))
+    print(sum(a))
