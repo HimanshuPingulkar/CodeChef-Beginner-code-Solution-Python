@@ -1,0 +1,27 @@
+try:
+    p1_list, p2_list = [], []
+    
+    for _ in range(int(input())):
+        p1, p2 = map(int, input().split())
+        z = abs(p1-p2)
+        
+        if p1 > p2: p1_list.append(z)
+        else: p2_list.append(z)
+        
+    if max(p1_list) > max(p2_list): print('{} {}'.format(1, max(p1_list)))
+    else: print('{} {}'.format(2, max(p2_list)))
+    
+except: pass    
+
+# ---------------------------- #
+
+n = int(input())
+max = -1
+cur = 0
+for i in range(n):
+	(a, b) = map(int, input().split())
+	cur += a - b
+	if abs(cur) > max:
+		max = abs(cur)
+		win = 1 if a > b else 2
+print(win, max)
