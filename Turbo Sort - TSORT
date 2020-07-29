@@ -1,0 +1,8 @@
+try:
+    n = int(input())
+    for _ in range(n):
+        l = []
+        [l.append(int(input())) for i in range(n)]
+        l.sort()
+        print('\n'.join(str(l[i]) for i in range(n)))
+except: pass
