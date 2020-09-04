@@ -1,0 +1,11 @@
+try:    
+    for _ in range(int(input())):
+        n = int(input())
+        l, count = [2**i for i in range(11, -1, -1)], 0
+        while(n != 0):
+            for i in l:
+                if n >= i:
+                    count += n//i
+                    n %= i
+        print(count)
+except: pass
